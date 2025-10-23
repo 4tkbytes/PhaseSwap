@@ -1,9 +1,9 @@
 use bevy::prelude::*;
 
 fn main() {
-    App::new().run();
-}
-
-fn hello_world() {
-    println!("Hello World!");
+    App::new()
+        .add_plugins(DefaultPlugins)
+        // .add_systems(Startup, setup)
+        // .add_systems(Update, (player_movement, camera_follow).chain())
+        .run();
 }
