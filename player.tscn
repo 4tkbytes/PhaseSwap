@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwlxeckb72rgt"]
+
+[ext_resource type="PackedScene" uid="uid://v0te8wgvsjnu" path="res://models/companion_cube_-_portal_2_version.glb" id="1_4flbx"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_onrkg"]
+size = Vector3(2, 2, 2)
+
+[node name="Node" type="Node"]
+
+[node name="Player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Sketchfab_Scene" parent="Player" instance=ExtResource("1_4flbx")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player"]
+shape = SubResource("BoxShape3D_onrkg")
